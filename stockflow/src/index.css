@@ -1,32 +1,19 @@
 @import "tailwindcss";
 
-@theme: {
-  /* Custom Colors */
+@theme {
   --color-primary: #f5f5f4;
   --color-secondary: #16a34a;
   --color-text: #1c1917;
   --color-click: #15803d;
   --color-offline: #7c3aed;
 
-  /* Custom Font Families */
   --font-body: 'DM Sans', sans-serif;
   --font-money: 'DM Mono', monospace;
+  --font-main: 'Inter', sans-serif;
 
-  --font-sans: "Inter", sans-serif;
+  --text-20: 18px;
 
-  /* Custom Font Sizes */
-  --text-display: 3.5rem;
-  --text-tiny: 0.7rem;
+  /* Custom Border Colors */
+  --color-border: rgb(110, 108, 108);
 
-  /* Custom Spacing */
-  --spacing-18: 4.5rem;
-  --spacing-22: 5.5rem;
-
-  /* Custom Border Radius */
-  --radius-xl: 1.25rem;
-  --radius-pill: 9999px;
-
-  /* Custom Shadows */
-  --shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.08);
-  --shadow-glow: 0 0 16px rgba(108, 99, 255, 0.4);
 }
