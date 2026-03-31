@@ -47,7 +47,7 @@ export function PosNav() {
 
   return (
     <>
-      <div className="font-body flex relative align-middle m-auto justify-between pl-25 pr-3 h-20 border-border border-b">
+      <div className="font-body z-50 bg-white flex align-middle m-auto fixed top-0 left-0 right-0 justify-between pl-23 pr-3 h-20 border-border border-b">
         <div className="flex flex-col align-middle justify-center">
           <p className="font-semibold m-0 p-0 text-md">Point of Sale</p>
           <p className="text-light m-0 p-0 text-sm">Table service & takeaway</p>
@@ -94,7 +94,7 @@ export function PosNav() {
       </div>
 
       {offlineMode && (
-        <div className="text-white absolute py-0.5 bg-offline top-0 left-0 right-0 flex align-middle justify-center">
+        <div className="text-white fixed py-0.5 z-55  bg-offline top-0 left-0 right-0 flex align-middle justify-center">
           <div className="flex gap-2 text-sm">
             <span></span>
             <p>Offline Mode - Orders are queued for sync</p>

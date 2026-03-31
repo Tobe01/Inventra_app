@@ -21,12 +21,12 @@
   --font-main: 'Inter', sans-serif;
 
   --text-20: 18px;
+  --text-13: 13px;
   --height-pos: 240px;
+  --height-pos2: 2000px;
+  --width-card: 212px;
+  --padding-axis: 5px;
 
   /* Custom Border Colors */
   --color-border: rgb(238, 238, 237);
-}
-
-.he{
-  background-color:  #08722f;
 }
