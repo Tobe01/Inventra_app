@@ -1,6 +1,6 @@
 import { MainNav } from '../components/layout/main-nav';
 import { PosNav } from '../components/layout/pos-nav';
-import { Pos } from '../components/sections/pos-section';
+import { PosSection } from '../components/sections/pos-section';
 import { MenuOptions } from '../components/layout/menu-options';
 import { menu } from '../data/pos-data';
 
