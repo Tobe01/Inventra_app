@@ -16,6 +16,9 @@
   --color-pending: #D97706;
   --color-pendingfade: #ffdeb8;
 
+  --color-critical: #ffdcdc;
+  --color-low: #fff0df;
+
   --font-body: 'DM Sans', sans-serif;
   --font-money: 'DM Mono', monospace;
   --font-main: 'Inter', sans-serif;
