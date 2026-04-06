@@ -74,7 +74,7 @@ export function InventoryPage(){
                   <progress className='my-auto bg-amber-500' value="70" max="100"></progress>
                 </div>
                 <div className='m-auto'>
-                  <button className='px-1 rounded-sm m-auto text-light border border-border'>+ Restock</button>
+                  <button className='px-1 rounded-sm m-auto text-light border border-border cursor-pointer hover:bg-lightgreen hover:text-secondary hover:border-secondary'>+ Restock</button>
                 </div>
               </div>
 
@@ -102,7 +102,7 @@ export function InventoryPage(){
                   <progress className='my-auto bg-amber-500' value="70" max="100"></progress>
                 </div>
                 <div className='m-auto'>
-                  <button className='px-1 rounded-sm m-auto text-light border border-border'>+ Restock</button>
+                  <button className='px-1 rounded-sm m-auto text-light border border-border cursor-pointer hover:bg-lightgreen hover:text-secondary hover:border-secondary'>+ Restock</button>
                 </div>
               </div>
 
@@ -130,7 +130,7 @@ export function InventoryPage(){
                   <progress className='my-auto bg-amber-500' value="70" max="100"></progress>
                 </div>
                 <div className='m-auto'>
-                  <button className='px-1 rounded-sm m-auto text-light border border-border'>+ Restock</button>
+                  <button className='px-1 rounded-sm m-auto text-light border border-border cursor-pointer hover:bg-lightgreen hover:text-secondary hover:border-secondary'>+ Restock</button>
                 </div>
               </div>
 
