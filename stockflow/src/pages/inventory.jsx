@@ -52,7 +52,7 @@ export function InventoryPage() {
           </div>
 
           <div className="rounded-bl-lg rounded-br-lg border-x border-border">
-            <div className="flex border-b rounded-bl-lg rounded-br-lg border-border align-middle py-3 hover:bg-input justify-items-start gap-2">
+            <div className="flex border-b rounded-bl-lg rounded-br-lg border-border align-middle py-3  justify-items-start gap-2">
               <div className="flex w-[351.5px] pl-3.5 align-middle gap-2">
                 <div className="my-auto flex gap-2">
                   <div className="flex gap-2">
@@ -89,14 +89,14 @@ export function InventoryPage() {
                   </div>
                 </div>
                 <div className="m-auto">
-                  <button className="px-1 whitespace-nowrap rounded-sm m-auto text-light border border-border cursor-pointer hover:bg-lightgreen hover:text-secondary hover:border-secondary">
+                  <button className="px-1 scale-100 active:scale-110 whitespace-nowrap rounded-sm m-auto text-light border border-border cursor-pointer hover:bg-lightgreen hover:text-secondary hover:border-secondary">
                     + Restock
                   </button>
                 </div>
               </div>
             </div>
 
-            <div className="flex border-b bg-critical rounded-bl-lg rounded-br-lg border-border align-middle py-3 hover:bg-input justify-items-start gap-2">
+            <div className="flex border-b bg-critical rounded-bl-lg rounded-br-lg border-border align-middle py-3  justify-items-start gap-2">
               <div className="flex w-[351.5px] pl-3.5 align-middle gap-2">
                 <div className="my-auto flex gap-2">
                   <div className="flex gap-2">
@@ -133,14 +133,14 @@ export function InventoryPage() {
                   </div>
                 </div>
                 <div className="m-auto">
-                  <button className="px-1 whitespace-nowrap rounded-sm m-auto text-light border border-border cursor-pointer hover:bg-lightgreen hover:text-secondary hover:border-secondary">
+                  <button className="px-1 scale-100 active:scale-110 whitespace-nowrap rounded-sm m-auto text-light border border-border cursor-pointer hover:bg-lightgreen hover:text-secondary hover:border-secondary">
                     + Restock
                   </button>
                 </div>
               </div>
             </div>
 
-            <div className="flex border-b bg-low rounded-bl-lg rounded-br-lg border-border align-middle py-3 hover:bg-input justify-items-start gap-2">
+            <div className="flex border-b bg-low rounded-bl-lg rounded-br-lg border-border align-middle py-3  justify-items-start gap-2">
               <div className="flex w-[351.5px] pl-3.5 align-middle gap-2">
                 <div className="my-auto flex gap-2">
                   <div className="flex gap-2">
@@ -177,7 +177,7 @@ export function InventoryPage() {
                   </div>
                 </div>
                 <div className="m-auto">
-                  <button className="px-1 whitespace-nowrap rounded-sm m-auto text-light border border-border cursor-pointer hover:bg-lightgreen hover:text-secondary hover:border-secondary">
+                  <button className="px-1 scale-100 active:scale-110 whitespace-nowrap rounded-sm m-auto text-light border border-border cursor-pointer hover:bg-lightgreen hover:text-secondary hover:border-secondary">
                     + Restock
                   </button>
                 </div>
