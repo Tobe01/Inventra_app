@@ -7,7 +7,11 @@ export const inventory = [{
   quantity: 'OK',
   inStock: '85 kg',
   minLevel: '20 kg',
-  stockLevel: '85%'
+  stockLevel: '85%',
+  background: '#baffd4',
+  color: '#16a34a',
+  progressLoader: '#16a34a',
+  containerBackground: '#e0ffec',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -16,7 +20,11 @@ export const inventory = [{
   quantity: 'Critical',
   inStock: '6 L',
   minLevel: '10 L',
-  stockLevel: '12%'
+  stockLevel: '12%',
+  background: '#ffdcdc',
+  color: '#a31616',
+  progressLoader: '#a31616',
+  containerBackground: '#ffe7e7',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -25,7 +33,11 @@ export const inventory = [{
   quantity: 'Critical',
   inStock: '4 kg',
   minLevel: '10 kg',
-  stockLevel: '10%'
+  stockLevel: '10%',
+  background: '#ffdcdc',
+  color: '#a31616',
+  progressLoader: '#a31616',
+  containerBackground: '#ffe7e7',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -34,7 +46,11 @@ export const inventory = [{
   quantity: 'Low',
   inStock: '12 kg',
   minLevel: '10 kg',
-  stockLevel: '30%'
+  stockLevel: '30%',
+  background: '#fff0df',
+  color: '#D97706',
+  progressLoader: '#D97706',
+  containerBackground: '#fff3e7',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -43,7 +59,11 @@ export const inventory = [{
   quantity: 'OK',
   inStock: '18 kg',
   minLevel: '5 kg',
-  stockLevel: '60%'
+  stockLevel: '60%',
+  background: '#baffd4',
+  color: '#16a34a',
+  progressLoader: '#16a34a',
+  containerBackground: '#e0ffec',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -52,7 +72,11 @@ export const inventory = [{
   quantity: 'OK',
   inStock: '22 kg',
   minLevel: '5 kg',
-  stockLevel: '100%'
+  stockLevel: '99%',
+  background: '#baffd4',
+  color: '#16a34a',
+  progressLoader: '#16a34a',
+  containerBackground: '#e0ffec',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -61,7 +85,11 @@ export const inventory = [{
   quantity: 'Low',
   inStock: '3 kg',
   minLevel: '2 kg',
-  stockLevel: '30%'
+  stockLevel: '30%',
+  background: '#fff0df',
+  color: '#D97706',
+  progressLoader: '#D97706',
+  containerBackground: '#fff3e7',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -70,7 +98,11 @@ export const inventory = [{
   quantity: 'Critical',
   inStock: '2 kg',
   minLevel: '3 kg',
-  stockLevel: '13%'
+  stockLevel: '13%',
+  background: '#ffdcdc',
+  color: '#a31616',
+  progressLoader: '#a31616',
+  containerBackground: '#ffe7e7',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -79,7 +111,11 @@ export const inventory = [{
   quantity: 'OK',
   inStock: '48 fingers',
   minLevel: '20 fingers',
-  stockLevel: '40%'
+  stockLevel: '55%',
+  background: '#baffd4',
+  color: '#16a34a',
+  progressLoader: '#16a34a',
+  containerBackground: '#e0ffec',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -88,7 +124,11 @@ export const inventory = [{
   quantity: 'Ok',
   inStock: '24 bottles',
   minLevel: '12 bottles',
-  stockLevel: '40%'
+  stockLevel: '72%',
+  background: '#baffd4',
+  color: '#16a34a',
+  progressLoader: '#16a34a',
+  containerBackground: '#e0ffec',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -97,7 +137,11 @@ export const inventory = [{
   quantity: 'Low',
   inStock: '8 kg',
   minLevel: '5 kg',
-  stockLevel: '32%'
+  stockLevel: '32%',
+  background: '#fff0df',
+  color: '#D97706',
+  progressLoader: '#D97706',
+  containerBackground: '#fff3e7',
 }, 
 {
   itemId: crypto.randomUUID(),
@@ -106,6 +150,10 @@ export const inventory = [{
   quantity: 'Ok',
   inStock: '4 kg',
   minLevel: '1 kg',
-  stockLevel: '40%'
+  stockLevel: '49%',
+  background: '#baffd4',
+  color: '#16a34a',
+  progressLoader: '#16a34a',
+  containerBackground: '#e0ffec',
 }, 
 ]

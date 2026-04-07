@@ -19,6 +19,10 @@
   --color-critical: #ffdcdc;
   --color-low: #fff0df;
 
+  --color-criticalContainer: #ffe7e7;
+  --color-lowContainer: #fff3e7;
+  --color-okContainer: #e0ffec;
+
   --font-body: 'DM Sans', sans-serif;
   --font-money: 'DM Mono', monospace;
   --font-main: 'Inter', sans-serif;
@@ -33,3 +37,4 @@
   /* Custom Border Colors */
   --color-border: rgb(238, 238, 237);
 }
+
