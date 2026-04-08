@@ -11,21 +11,21 @@ export function MainNav(){
         <button className='text-white bg-secondary font-bold text-20 rounded-md text-center justify-items-center w-9 ml-auto mr-auto py-1 cursor-pointer'>SF</button>
           <div className='flex flex-col space-y-1'>
             <Link to="/pos">
-              <button className='hover:bg-neutral-700 transition-transform duration-100 active:translate-y-1 relative group rounded-md text-center justify-items-center py-2.5 px-2.5 cursor-pointer'>
+              <button className='hover:bg-neutral-700 focus:bg-gray-700 transition-transform duration-100 active:translate-y-1 relative group rounded-md text-center justify-items-center py-2.5 px-2.5 cursor-pointer'>
                 <img src={grid} alt='pos-icon' loading='lazy' />
                 <span className='absolute -right-22 top-2 w-18 p-1 rounded-md pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-sm m-auto text-center bg-dark text-white'>POS</span>
               </button>
             </Link>
             
             <Link to="/inventory">
-              <button className='hover:bg-neutral-700 transition-transform duration-100 active:translate-y-1  group relative rounded-md text-center justify-items-center py-2.5 px-2.5 cursor-pointer'>
+              <button className='hover:bg-neutral-700 focus:bg-gray-700 transition-transform duration-100 active:translate-y-1  group relative rounded-md text-center justify-items-center py-2.5 px-2.5 cursor-pointer'>
                 <img src={cube} alt='inventory-icon' loading='lazy' />
                 <span className='absolute -right-22 pointer-events-none bottom-2 bg-dark text-white opacity-0 group-hover:opacity-100 duration-200 text-sm w-18 p-1 m-auto rounded-md text-center'>Inventory</span>
               </button>
             </Link>
              
             <Link to="/orders">
-              <button className='hover:bg-neutral-700 transition-transform duration-100 active:translate-y-1  group relative rounded-md text-center justify-items-center py-2.5 px-2.5 cursor-pointer'>
+              <button className='hover:bg-neutral-700 focus:bg-gray-700 transition-transform duration-100 active:translate-y-1  group relative rounded-md text-center justify-items-center py-2.5 px-2.5 cursor-pointer'>
                 <img src={documents} alt='orders-icon' loading='lazy' />
                 <span className='absolute pointer-events-none -right-26 bottom-2 bg-dark opacity-0 group-hover:opacity-100 duration-200 text-white text-sm w-22 p-1 m-auto text-center rounded-md whitespace-nowrap'>Order Feed</span>
               </button>

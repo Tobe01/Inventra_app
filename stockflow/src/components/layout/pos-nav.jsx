@@ -55,7 +55,7 @@ export function PosNav() {
         </div>
 
         <div className="flex align-middle justify-between min-w-xl">
-          <div className="bg-input group border border-border rounded-tl-md rounded-bl-md rounded-tr-md rounded-br-md flex m-auto align-middle justify-center gap-2 p-0.5 px-2">
+          <div className="bg-input focus-within:border-secondary border border-border rounded-tl-md rounded-bl-md rounded-tr-md rounded-br-md flex m-auto align-middle justify-center gap-2 p-0.5 px-2">
             <button className="mt-auto mb-auto pt-1">
               <img width={15} src={search} alt="search-icon" loading="lazy" />
             </button>
