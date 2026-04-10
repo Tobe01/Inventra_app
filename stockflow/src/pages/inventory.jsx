@@ -34,11 +34,11 @@ export function InventoryPage() {
         <Restock setRestock={setRestock} ingredient={restockIngredient} />
       )}
 
-      <div className="font-body text-[14px] gap-5 h- flex flex-col pl-25 pr-5 py-6">
+      <div className="font-body bg-input min-h-screen text-[14px] gap-5 h- flex flex-col pl-25 pr-5 pt-25 pb-6">
         <div className="flex align-middle m-auto justify-center gap-2 w-full">
           {stockMetrix.map((matrix) => {
             return (
-              <div id={matrix.id} className="p-3.5 w-80 rounded-lg bg-input border border-border">
+              <div id={matrix.id} className="p-3.5 w-80 rounded-lg bg-white border border-border">
                 <div className="space-y-1.5">
                   <p className="text-light font-bold text-sm">{matrix.title}</p>
                   <p style={{color: `${matrix.color}`}} className="text-3xl font-bold font-money">{matrix.value}</p>
@@ -58,7 +58,7 @@ export function InventoryPage() {
             <div className="w-25 my-auto pl-3.5"></div>
           </div>
 
-          <div className="rounded-bl-lg rounded-br-lg border-x border-border">
+          <div className="rounded-bl-lg bg-white rounded-br-lg border-x border-border">
             {inventory.map((items) => {
               const stockPercentage = items.stockLevel;
               const buttonColor = items.color;
@@ -67,7 +67,7 @@ export function InventoryPage() {
 
               return (
                 <div
-                  id={items.itemId}
+                  Key={items.itemId}
                   className="flex border-b rounded-bl-lg rounded-br-lg border-border align-middle py-3 justify-items-start gap-2"
                 >
                   <div className="flex w-[351.5px] pl-3.5 align-middle gap-2">
