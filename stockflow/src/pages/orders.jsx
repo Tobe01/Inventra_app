@@ -7,7 +7,11 @@ export function OrdersPage() {
   const [ status, setStatus ] = useState('Completed');
 
   function updateStatus(){
-    setStatus('Pending Kitchen');
+    if(status === 'Completed'){
+      setStatus('Pending Kitchen');
+    } else{
+      setStatus('Completed');
+    }
   }
   return (
     <div>
@@ -21,13 +25,13 @@ export function OrdersPage() {
               <button className="px-3.5 cursor-pointer hover:border-black border-solid hover:border bg-black text-white rounded-full font-semibold py-0.5  border border-border">
                 All
               </button>
-              <button className="px-3.5 cursor-pointer bg-white border-solid hover:border-black hover:border rounded-full font-semibold py-0.5 text-light border border-border">
+              <button className="px-3.5 hover:text-black cursor-pointer bg-white border-solid hover:border-black hover:border rounded-full font-semibold py-0.5 text-light border border-border">
                 Pending
               </button>
-              <button className="px-3.5 cursor-pointer bg-white border-solid hover:border-black hover:border rounded-full font-semibold py-0.5 text-light border border-border">
+              <button className="px-3.5 hover:text-black cursor-pointer bg-white border-solid hover:border-black hover:border rounded-full font-semibold py-0.5 text-light border border-border">
                 Completed
               </button>
-              <button className="px-3.5 cursor-pointer bg-white border-solid hover:border-black hover:border rounded-full font-semibold py-0.5 text-light border border-border">
+              <button className="px-3.5 hover:text-black cursor-pointer bg-white border-solid hover:border-black hover:border rounded-full font-semibold py-0.5 text-light border border-border">
                 Pending Sync
               </button>
             </div>
@@ -55,7 +59,7 @@ export function OrdersPage() {
                         {order.time}
                       </span>
                       <div className="flex  my-auto gap-2">
-                        <p className="font-money font-bold text-lg">
+                        <p className="font-money font-semibold text-md">
                           {`₦${(order.amountCents / 100).toLocaleString("en-NG", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
                         </p>
                         <span className="">#</span>
