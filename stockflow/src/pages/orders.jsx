@@ -36,6 +36,10 @@ export function OrdersPage() {
               </button>
             </div>
           </div>
+          
+          {/* <div className="bg-red-500m-auto mt-30 flex align-middle justify-center">
+            <p className="text-light">No orders found</p>
+          </div> */}
 
           <div className="flex flex-col mt-5 space-y-2">
             {orders.map((order) => {
