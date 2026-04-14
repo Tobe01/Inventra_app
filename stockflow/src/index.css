@@ -45,7 +45,7 @@
   background: rgba(0, 0, 0, 0.4); /* dark overlay */
   -webkit-backdrop-filter: blur(8px); /* Safari support */
   backdrop-filter: blur(8px);
-  z-index: 50;
+  z-index: 100;
 }
 
 /* Modal content */
