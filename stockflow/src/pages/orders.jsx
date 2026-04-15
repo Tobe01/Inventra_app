@@ -62,11 +62,11 @@ export function OrdersPage() {
                       <span className="text-light font-money text-sm my-auto">
                         {order.time}
                       </span>
-                      <div className="flex  my-auto gap-2">
+                      <div className="flex  my-auto gap-3">
                         <p className="font-money font-semibold text-md">
                           {`₦${(order.amountCents / 100).toLocaleString("en-NG", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`}
                         </p>
-                        <span className="">#</span>
+                        <span className="bg-secondary p-1 h-fit rounded-full my-auto"></span>
                       </div>
                     </div>
                   </div>

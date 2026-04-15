@@ -76,7 +76,7 @@ export function MainNav() {
 
           <button onClick={renderUserProfile} className="text-white scale-100 active:scale-110 group relative font-bold bg-neutral-700 rounded-md text-center justify-items-center py-2 px-2.5 cursor-pointer">
             GU{" "}
-            <span className="absolute pointer-events-none opacity-0 group-hover:opacity-100 duration-200 -right-22 bottom-1 bg-dark text-white text-sm w-18 p-1 m-auto text-center rounded-md">
+            <span className="absolute whitespace-nowrap pointer-events-none opacity-0 group-hover:opacity-100 duration-200 left-15 bottom-1 bg-dark text-white text-sm p-1 m-auto text-center rounded-md">
              Guest User
             </span>
           </button>
