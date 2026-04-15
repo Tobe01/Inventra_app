@@ -68,7 +68,7 @@ export function Profile({ setUserProfile }) {
             </div>
 
             <div className="">
-              <p className="font-bold text-20">Ada Obi</p>
+              <p className="font-bold text-20">Guest User</p>
             </div>
           </div>
         </div>
