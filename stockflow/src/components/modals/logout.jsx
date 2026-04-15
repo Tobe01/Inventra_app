@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export function Logout({setLogout}){
   
   function cancelLogout(){
@@ -11,10 +13,12 @@ export function Logout({setLogout}){
           <p>Logout From Admin</p>
         </div>
         <div className="flex flex-1 gap-2">
-          <button className="bg-secondary hover:bg-darkgreen scale-100 hover:scale-102 transition-transform duration-100 active:scale-95 cursor-pointer text-white text-[17px] w-[50%] rounded-sm">
+          <Link to="/home" className="bg-secondary hover:bg-darkgreen p-1 text-center scale-100 hover:scale-102 transition-transform duration-100 active:scale-95 cursor-pointer text-white text-[17px] w-[50%] rounded-sm">
+            <button className='cursor-pointer' >
             Yes, log out
-          </button>
-          <button onClick={cancelLogout} className="bg-white active:translate-x-1 hover:bg-gray-100 hover:text-black text-light border border-border cursor-pointer text-[17px] rounded-sm w-[50%]">
+            </button>
+          </Link>
+          <button onClick={cancelLogout} className="bg-white p-1 active:translate-x-1 hover:bg-gray-100 hover:text-black text-light border border-border cursor-pointer text-[17px] rounded-sm w-[50%]">
             Cancel
           </button>
         </div>
