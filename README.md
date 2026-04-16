@@ -1,14 +1,14 @@
-# StockFlow
+# inventra
 
 **Order-driven inventory system for a restaurant (with real-world constraints)**
 
-StockFlow is a modern restaurant operating system, inspired by real-world products used in emerging markets. It models how orders, inventory, and kitchen workflows interact under conditions like unreliable internet and high transaction volume.
+inventra is a modern restaurant operating system, inspired by real-world products used in emerging markets. It models how orders, inventory, and kitchen workflows interact under conditions like unreliable internet and high transaction volume.
 
 ---
 
 ## 🚀 Overview
 
-StockFlow is designed to reflect how restaurants actually operate:
+inventra is designed to reflect how restaurants actually operate:
 
 - Orders are placed through a POS interface
 - Each order triggers automatic inventory deduction based on predefined recipes
@@ -103,10 +103,10 @@ This project goes beyond a typical CRUD application by modeling:
 
 ```bash
 # Clone the repo
-git clone https://github.com/tobe01/stockflow.git
+git clone https://github.com/tobe01/inventra.git
 
 # Navigate into project
-cd stockflow
+cd inventra
 
 # Install dependencies
 npm install

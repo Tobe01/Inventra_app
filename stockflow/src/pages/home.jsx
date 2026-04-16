@@ -15,7 +15,7 @@ export function Home() {
               </div>
               <div className="text-[15px] pt-5 bg-white">
                 <p>
-                  StockFlow puts your entire inventory on autopilot precise,
+                  inventra puts your entire inventory on autopilot precise,
                   real-time, and built for the way your business actually runs.
                 </p>
               </div>
