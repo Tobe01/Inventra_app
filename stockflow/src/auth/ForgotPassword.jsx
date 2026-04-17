@@ -4,9 +4,14 @@ import InputField from './components/InputField';
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function ForgotPassword() {
+export function ForgotPassword({forgotPassword, setForgotpassword, setLogin}) {
   const [email, setEmail] = useState('');
   const [touched, setTouched] = useState(false);
+
+  function renderLogin(){
+    setLogin(true);
+    setForgotpassword(false);
+  }
 
   const validateEmail = !email
     ? 'Email is required.'
@@ -21,6 +26,8 @@ export function ForgotPassword() {
 
   return (
     <AuthLayout
+      forgotPassword={forgotPassword}
+      setForgotpassword={setForgotpassword}
       title="Forgot Password"
       subtitle="Enter your email and we’ll send a reset link to your inbox."
     >
@@ -40,7 +47,7 @@ export function ForgotPassword() {
 
         <button
           type="submit"
-          className="w-full rounded-3xl bg-secondary py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-darkgreen active:scale-95"
+          className="w-full cursor-pointer rounded-3xl bg-secondary py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-darkgreen active:scale-95"
         >
           Send reset link
         </button>
@@ -48,7 +55,7 @@ export function ForgotPassword() {
 
       <div className="mt-6 text-center text-sm text-slate-600">
         <p className="mb-2">Remembered your password?</p>
-        <button className="mt-2 font-semibold text-secondary hover:text-darkgreen focus:outline-none" type="button">
+        <button onClick={renderLogin} className="mt-2 font-semibold text-gray-200 hover:text-slate-900 focus:outline-none" type="button">
           Back to sign in
         </button>
       </div>

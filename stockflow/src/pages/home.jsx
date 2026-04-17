@@ -5,10 +5,14 @@ import inventraNav from "../assets/navbar.webp";
 import inventry from "../assets/screencapture-localhost-5173-inventory-2026-04-16-13_31_45.jpg";
 import { Login } from "../auth/Login";
 import { Signup } from "../auth/Signup";
+import { ForgotPassword } from "../auth/ForgotPassword";
+import { ResetPassword } from "../auth/ResetPassword";
 
 export function Home() {
   const [ login, setLogin ] = useState(false);
   const [ signup, setSignup ] = useState(false);
+  const [ forgotPassword, setForgotpassword ] = useState(false);
+  const [ resetPassword, setResetpassword ] = useState(false);
 
   function showLoginModal() {
     setLogin(true);
@@ -20,9 +24,11 @@ export function Home() {
 
   return (
     <>
-      { login && <Login login={login} setLogin={setLogin} />}
-
-      { signup && <Signup signup={signup} setSignup={setSignup} /> }
+      { login && <Login setSignup={setSignup} setForgotpassword={setForgotpassword} login={login} setLogin={setLogin} />}
+      { signup && <Signup setLogin={setLogin} signup={signup} setSignup={setSignup} /> }
+      { forgotPassword && <ForgotPassword forgotPassword={forgotPassword} setForgotpassword={setForgotpassword} setLogin={setLogin} /> }
+      
+      { resetPassword && <ResetPassword resetPassword={resetPassword} setResetpassword={setResetpassword} login={login} setLogin={setLogin} /> }
 
       <div className="flex font-body w-full h-206.28 pt-10 bg-[radial-gradient(#8C8C8C_1px,#e0ffec_1px)] bg-size-[30px_30px]">
         <div className="flex flex-col space-y-8.5">

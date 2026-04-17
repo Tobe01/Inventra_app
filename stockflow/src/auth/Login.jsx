@@ -4,10 +4,20 @@ import InputField from "./components/InputField";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function Login({ setLogin, login }) {
+export function Login({ setLogin, login, setSignup, setForgotpassword }) {
   const [form, setForm] = useState({ email: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
   const [touched, setTouched] = useState({});
+
+  const showForgotPass = ()=>{
+    setForgotpassword(true);
+    setLogin(false);
+  }
+
+  function renderSignup(){
+    setSignup(true);
+    setLogin(false);
+  }
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -139,16 +149,17 @@ export function Login({ setLogin, login }) {
 
         <button
           type="submit"
-          className="w-full rounded-3xl bg-secondary py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-darkgreen active:scale-95"
+          className="w-full cursor-pointer rounded-3xl bg-secondary py-3 text-sm font-semibold text-white sm transition hover:bg-darkgreen active:scale-95"
         >
           Sign in
         </button>
       </form>
 
-      <div className="mt-6 space-y-4 text-center text-sm text-white">
+      <div className="mt-6 space-y-4 text-center text-sm text-gray-200">
         <p>
           New to Inventra?{" "}
           <button
+            onClick={renderSignup}
             className="cursor-pointer font-semibold text-secondary hover:text-darkgreen focus:outline-none"
             type="button"
           >
@@ -156,7 +167,8 @@ export function Login({ setLogin, login }) {
           </button>
         </p>
         <button
-          className="font-semibold text-white hover:text-slate-900 focus:outline-none"
+          onClick={showForgotPass}
+          className="font-semibold text-gray-200 hover:text-slate-900 focus:outline-none"
           type="button"
         >
           Forgot password?

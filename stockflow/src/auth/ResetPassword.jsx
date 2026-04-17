@@ -2,7 +2,7 @@ import { useState } from "react";
 import AuthLayout from "./components/AuthLayout";
 import InputField from "./components/InputField";
 
-export function ResetPassword() {
+export function ResetPassword({resetPassword, setResetpassword, login, setLogin}) {
   const [form, setForm] = useState({ password: "", confirmPassword: "" });
   const [showPassword, setShowPassword] = useState({
     password: false,
@@ -38,8 +38,14 @@ export function ResetPassword() {
     setTouched({ password: true, confirmPassword: true });
   };
 
+  // display login modal
+  function renderLogin(){
+    
+  }
+
   return (
     <AuthLayout
+      setResetpassword={setResetpassword}
       title="Reset your password"
       subtitle="Choose a new password to keep your account secure."
     >
@@ -202,8 +208,9 @@ export function ResetPassword() {
       <div className="mt-6 text-center text-sm text-slate-600">
         <p className="mb-2">Remembered your password?</p>
           <button
+            onClick={renderLogin}
             type="button"
-            className="font-semibold text-secondary hover:text-darkgreen focus:outline-none"
+            className="font-semibold  text-gray-200 hover:text-slate-900 focus:outline-none"
           >
             Sign in instead
           </button>

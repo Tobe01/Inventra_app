@@ -4,7 +4,13 @@ import InputField from "./components/InputField";
 
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-export function Signup({setSignup, signup}) {
+export function Signup({setSignup, signup, setLogin}) {
+
+  function renderLogin(){
+    setLogin(true);
+    setSignup(false);
+  }
+
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -241,16 +247,16 @@ export function Signup({setSignup, signup}) {
 
         <button
           type="submit"
-          className="w-full mt-2 rounded-3xl bg-secondary py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-darkgreen active:scale-95"
+          className="w-full mt-2 rounded-3xl bg-secondary cursor-pointer py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-darkgreen active:scale-95"
         >
           Create account
         </button>
       </form>
 
-      <div className="mt-3 text-center text-sm text-slate-600">
+      <div className="mt-3 text-center text-sm text-gray-200">
         <p>
           Already have an account?{" "}
-            <button className="font-semibold cursor-pointer text-secondary hover:text-darkgreen focus:outline-none" type="button">Sign in</button>
+            <button onClick={renderLogin} className="font-semibold cursor-pointer text-secondary hover:text-darkgreen focus:outline-none" type="button">Sign in</button>
         </p>
       </div>
     </AuthLayout>

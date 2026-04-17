@@ -30,12 +30,12 @@ export function InputField({
           placeholder={placeholder}
           autoComplete={autoComplete}
           className={`w-full rounded-3xl border px-4 py-2 text-sm text-slate-900 bg-white shadow-sm transition focus:outline-none focus:ring-2 focus:ring-secondary/30 focus:border-secondary ${
-            error ? 'border-secondary' : 'border-border'
+            error ? 'border-secondaryred' : 'border-border'
           }`}
         />
         {children && <div className="absolute inset-y-0 right-3 flex items-center">{children}</div>}
       </div>
-      <p className={`text-xs ${error ? 'text-secondary' : 'text-slate-400'}`}>
+      <p className={`text-xs ${error ? 'text-secondaryred' : 'text-gray-200'}`}>
         {error || hint}
       </p>
     </div>

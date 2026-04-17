@@ -1,7 +1,7 @@
 import React from 'react';
 import close from "../../assets/icons/close_white.svg";
 
-export function AuthLayout({ title, subtitle, children, footer, setLogin, login, signup, setSignup }) {
+export function AuthLayout({ title, subtitle, children, footer, setLogin, login, setSignup, signup, forgotPassword, setForgotpassword }) {
   
   function closeLogin(){
     if(login === true){
@@ -10,7 +10,10 @@ export function AuthLayout({ title, subtitle, children, footer, setLogin, login,
     } else if(signup === true){
       setSignup(false);
       setLogin(false);
-    } 
+    } else if(forgotPassword === true){
+      setForgotpassword(false);
+      setLogin(false);
+    }
   }
 
   return (
@@ -24,7 +27,7 @@ export function AuthLayout({ title, subtitle, children, footer, setLogin, login,
           <div className="text-center">
             <p className="text-[26px] font-bold text-secondary">{title}</p>
             {subtitle && (
-              <p className="text-sm mb-2.5 leading-relaxed text-white">
+              <p className="text-sm mb-2.5 leading-relaxed text-gray-200">
                 {subtitle}
               </p>
             )}
@@ -32,7 +35,7 @@ export function AuthLayout({ title, subtitle, children, footer, setLogin, login,
 
           {children}
 
-          {footer && <div className="text-sm text-white">{footer}</div>}
+          {footer && <div className="text-sm text-gray-200">{footer}</div>}
         </div>
       </div>
     </div>
