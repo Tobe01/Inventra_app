@@ -21,12 +21,18 @@ export function Home() {
           </div>
 
           <div className="flex gap-2 align-middle justify-center">
-            <button className="bg-white scale-100 active:-translate-y-1 hover:bg-lightgreen hover:border-secondary hover:text-secondary border border-border text-gray-500 m-auto p-1 px-4 rounded-md cursor-pointer">
-              Log in
-            </button>
-            <button className="bg-secondary hover:bg-darkgreen scale-100 hover:scale-102 transition-transform duration-100 active:scale-95  m-auto p-1 px-4 rounded-md text-white cursor-pointer">
-              Sign Up
-            </button>
+            <Link
+              to="/Login"
+              className="bg-white scale-100 active:-translate-y-1 hover:bg-lightgreen hover:border-secondary hover:text-secondary border border-border text-gray-500 m-auto p-1 px-4 rounded-md cursor-pointer"
+            >
+              <button className="cursor-pointer">Log in</button>
+            </Link>
+            <Link
+              to="/Signup"
+              className="bg-secondary hover:bg-darkgreen scale-100 hover:scale-102 transition-transform duration-100 active:scale-95  m-auto p-1 px-4 rounded-md text-white cursor-pointer"
+            >
+              <button className="cursor-pointer">Sign Up</button>
+            </Link>
           </div>
         </div>
 
@@ -41,10 +47,11 @@ export function Home() {
             </div>
           </div>
 
-          <Link to="/pos" className="bg-secondary hover:bg-darkgreen scale-100 hover:scale-102 transition-transform duration-100 active:scale-95  m-auto p-1 px-10 rounded-md text-white cursor-pointer text-2xl">
-            <button >
-              Try Demo
-            </button>
+          <Link
+            to="/pos"
+            className="bg-secondary hover:bg-darkgreen scale-100 hover:scale-102 transition-transform duration-100 active:scale-95  m-auto p-1 px-10 rounded-md text-white cursor-pointer text-2xl"
+          >
+            <button className="cursor-pointer">Try Demo</button>
           </Link>
         </div>
 
