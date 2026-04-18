@@ -5,11 +5,13 @@ import grid from "../../assets/icons/proicons--grid.svg";
 import logout from "../../assets/icons/logout_24dp_EFEFEF_FILL0_wght400_GRAD0_opsz24.svg";
 import documents from "../../assets/icons/proicons--document.svg";
 import { Logout } from "../modals/logout";
+import { LoggingOut } from "../modals/logging-out";
 import { Profile } from "../modals/profile";
 import inventra from "../../../public/iv-logo.webp";
 
 export function MainNav() {
   const [logOut, setLogout] = useState(false);
+  const [loggingout, setLoggingout] = useState();
   const [useprofile, setUserProfile] = useState(false);
 
   function renderLogout() {
@@ -22,8 +24,8 @@ export function MainNav() {
 
   return (
     <>
-      {logOut && <Logout setLogout={setLogout} />}
-
+      {logOut && <Logout logOut={logOut} setLogout={setLogout} setLoggingout={setLoggingout} />}
+      {loggingout && <LoggingOut />}
       {useprofile && <Profile setUserProfile={setUserProfile} />}
 
       <div className="font-body bg-dark z-105 fixed left-0 top-0 bottom-0 flex flex-col align-middle justify-between py-5 px-4">

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import inventralogo from "../../public/iv-logo.webp";
 import inventraNav from "../assets/navbar.webp";
 import inventry from "../assets/screencapture-localhost-5173-inventory-2026-04-16-13_31_45.jpg";
@@ -7,27 +7,60 @@ import { Login } from "../auth/Login";
 import { Signup } from "../auth/Signup";
 import { ForgotPassword } from "../auth/ForgotPassword";
 import { ResetPassword } from "../auth/ResetPassword";
+import spinner from "../assets/svg-spinners--tadpole.svg";
 
 export function Home() {
-  const [ login, setLogin ] = useState(false);
-  const [ signup, setSignup ] = useState(false);
-  const [ forgotPassword, setForgotpassword ] = useState(false);
-  const [ resetPassword, setResetpassword ] = useState(false);
+  const [login, setLogin] = useState(false);
+  const [signup, setSignup] = useState(false);
+  const [forgotPassword, setForgotpassword] = useState(false);
+  const [resetPassword, setResetpassword] = useState(false);
+  const [demo, setDemo] = useState("Try Demo");
+
+  const navigation = useNavigate();
 
   function showLoginModal() {
     setLogin(true);
   }
 
-  const showSignup = ()=>{
-    setSignup(true)
-  }
+  const showSignup = () => {
+    setSignup(true);
+  };
+
+  const runDemo = () => {
+    setDemo(<div className="flex gap-2"><img src={spinner} alt="spinner" loading="lazy" /><p>Loading Demo...</p></div>);
+    setTimeout(() => {
+      navigation("/pos");
+    }, 4000);
+  };
 
   return (
     <>
-      { login && <Login setSignup={setSignup} setForgotpassword={setForgotpassword} login={login} setLogin={setLogin} />}
-      { signup && <Signup setLogin={setLogin} signup={signup} setSignup={setSignup} /> }
-      { forgotPassword && <ForgotPassword forgotPassword={forgotPassword} setForgotpassword={setForgotpassword} setLogin={setLogin} /> }
-      { resetPassword && <ResetPassword resetPassword={resetPassword} setResetpassword={setResetpassword} login={login} setLogin={setLogin} /> }
+      {login && (
+        <Login
+          setSignup={setSignup}
+          setForgotpassword={setForgotpassword}
+          login={login}
+          setLogin={setLogin}
+        />
+      )}
+      {signup && (
+        <Signup setLogin={setLogin} signup={signup} setSignup={setSignup} />
+      )}
+      {forgotPassword && (
+        <ForgotPassword
+          forgotPassword={forgotPassword}
+          setForgotpassword={setForgotpassword}
+          setLogin={setLogin}
+        />
+      )}
+      {resetPassword && (
+        <ResetPassword
+          resetPassword={resetPassword}
+          setResetpassword={setResetpassword}
+          login={login}
+          setLogin={setLogin}
+        />
+      )}
 
       <div className="flex font-body w-full h-206.28 pt-10 bg-[radial-gradient(#8C8C8C_1px,#e0ffec_1px)] bg-size-[30px_30px]">
         <div className="flex flex-col space-y-8.5">
@@ -49,12 +82,15 @@ export function Home() {
             <div className="flex gap-2 align-middle justify-center">
               <button
                 onClick={showLoginModal}
-                className="bg-white scale-100 active:-translate-y-1 hover:bg-lightgreen hover:border-secondary hover:text-secondary border border-secondary text-secondary m-auto p-1 px-4 rounded-md cursor-pointer"
+                className="bg-white scale-100 hover:scale-102 transition-transform duration-100 active:scale-95 hover:bg-lightgreen hover:border-secondary hover:text-secondary border border-secondary text-secondary m-auto p-1 px-4 rounded-md cursor-pointer"
               >
                 Log in
               </button>
 
-              <button onClick={showSignup} className="bg-secondary hover:bg-darkgreen scale-100 hover:scale-102 transition-transform duration-100 active:scale-95  m-auto p-1 px-4 rounded-md text-white cursor-pointer">
+              <button
+                onClick={showSignup}
+                className="bg-secondary hover:bg-darkgreen scale-100 hover:scale-102 transition-transform duration-100 active:scale-95 border border-secondary  m-auto p-1 px-4 rounded-md text-white cursor-pointer"
+              >
                 Sign Up
               </button>
             </div>
@@ -71,12 +107,12 @@ export function Home() {
               </div>
             </div>
 
-            <Link
-              to="/pos"
+            <button
+              onClick={runDemo}
               className="bg-secondary hover:bg-darkgreen scale-100 hover:scale-102 transition-transform duration-100 active:scale-95  m-auto p-1 px-10 rounded-md text-white cursor-pointer text-2xl"
             >
-              <button className="cursor-pointer">Try Demo</button>
-            </Link>
+              {demo}
+            </button>
           </div>
 
           <div className="flex align-middle bg-white justify-center">
